@@ -1,6 +1,9 @@
 require_relative "boot"
 
-require "rails/all"
+#abridgement
+require 'rails/all'
+require "roo"
+#abridgement
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

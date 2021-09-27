@@ -1,0 +1,40 @@
+<h1>Tests#index</h1>
+<p>Find me in app/views/tests/index.html.erb</p><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>telefono</th>
+      <th>tipo</th>
+      <th>numero_a</th>
+      <th>numero_b</th>
+      <th>fecha</th>
+      <th>hora</th>
+      <th>durac_seg</th>
+      <th>latitude</th>
+      <th>longitude</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @tests.each do |test| %>
+      <tr>
+        <td><%= test.telefono %></td>
+        <td><%= test.numero_a %></td>
+        <td><%= test.numero_b %></td>
+        <td><%= test.fecha %></td>
+        <td><%= test.hora %></td>
+        <td><%= test.durac_seg %></td>
+        <td><%= test.latitude %></td>
+        <td><%= test.longitude %></td>
+        
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_with url: import_tests_path, local: true do |form| %>
+  <%= form.file_field :file %>
+  <%= form.submit %>
+<% end %>
